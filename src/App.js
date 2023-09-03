@@ -1,39 +1,39 @@
-import logo from './platzi.webp';
+import { TodoCounter } from './TodoCounter';
+import { TodoSearch } from './TodoSearch';
+import { TodoList } from './TodoList';
+import { TodoItem } from './TodoItem'; 
+import { CreateTodoButton } from './CreateTodoButton';
+import React from 'react';
+
 import './App.css';
+
+const defaultTodos = [
+  {text:"Calabazas", completed:true},
+  {text:"Acta de Blur", completed:false},
+  {text:"Presentar Acta", completed:true},
+  {text:"Comprar mani", completed:false}
+]
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
 
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      <TodoCounter completed={16} total={20} />
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edita el archivo <code>src/App.js</code> y guarda para recargar.
-        </p>
-        <a
-          className="App-link"
-          href="https://platzi.com/reactjs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          El one piece existe
-        </a>
-      </header>
-    </div>
-  );
-}
+      <TodoSearch />
 
-function TodoItem() {
-  return (
-    <li>
-      <span>V</span>
-      <p>Llorar por la Chamba</p>
-      <span>X</span>
-    </li>
+      <TodoList>
+
+        {defaultTodos.map(todo => (
+          <TodoItem key={todo.text} text={todo.text} completed={todo.completed}/>
+        ))}
+
+      </TodoList>
+
+      <CreateTodoButton />
+
+
+    </React.Fragment>
   );
 }
 
