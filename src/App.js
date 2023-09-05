@@ -5,7 +5,7 @@ import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 import React from 'react';
 
-import './App.css';
+
 
 const defaultTodos = [
   {text:"Calabazas", completed:true},
@@ -16,7 +16,7 @@ const defaultTodos = [
 
 function App() {
   return (
-    <React.Fragment>
+    <>
 
       <TodoCounter completed={16} total={20} />
 
@@ -32,8 +32,7 @@ function App() {
 
       <CreateTodoButton />
 
-
-    </React.Fragment>
+    </>
   );
 }
 
