@@ -8,7 +8,7 @@ img:hover{
     width: 70px;
 }
 
-button {
+.CreateTodoButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,15 +17,14 @@ button {
     width: 74px;
     padding: 0;
     border-radius: 37px;
-    border: 0;
+    border: none;
     background-color: #F2F4F5;
-    margin-left: 280px;
-    margin-bottom: 10px;
-    position: absolute;
-    bottom: 10px;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
     z-index: 1;
 }
-button:hover {
+.CreateTodoButton:hover {
     
     height: 80px;
     width: 80px;

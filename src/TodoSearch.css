@@ -1,15 +1,24 @@
-input {
-    height: 44px;
-    width: 279px;
-    margin-left: 48px;
-    margin-bottom: 40px;
+.TodoSearch{
+    background-color: #f9fbfc;
     border-radius: 2px;
-    border-style: solid;
-    border-color: rgba(30, 30, 31, 1);
+    border: 2px solid #202329;
+    margin: 0 24px;
+    height: 64px;
+    width: calc(100% - 62px);
+    font-size: 24px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #1e1e1f;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
 }
 
-input::placeholder {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+.TodoSearch::placeholder {
+    color: #a5a5a5;
+    font-family: 'Montserrat', Times, serif;
     font-size: 24px;
+}
+
+.TodoSearch:focus {
+    outline-color: #61dafa;
 }
