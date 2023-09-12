@@ -11,16 +11,28 @@ const defaultTodos = [
   {text:"Calabazas", completed:true},
   {text:"Acta de Blur", completed:false},
   {text:"Presentar Acta", completed:true},
-  {text:"Comprar mani", completed:false}
+  {text:"Comprar mani", completed:false},
+  {text:"Consignar oferta real", completed:false}
 ]
 
 function App() {
+
+  const [todos, setTodos] = React.useState(defaultTodos);
+
+  const [searchValue, setSearchValue] = React.useState('');
+
+  const completedTodos = todos.filter(todo => todo.completed).length;
+  const totalTodos = todos.length;
+
   return (
     <>
 
-      <TodoCounter completed={16} total={20} />
+      <TodoCounter completed={completedTodos} total={totalTodos} />
 
-      <TodoSearch />
+      <TodoSearch 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
 
       <TodoList>
 
