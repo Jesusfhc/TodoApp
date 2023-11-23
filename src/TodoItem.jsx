@@ -1,4 +1,5 @@
 import "./TodoItem.css"
+import { DeleteIcon } from "./DeleteIcon";
 
 function TodoItem(props) {
 
@@ -9,6 +10,8 @@ function TodoItem(props) {
         onClick={props.onComplete}>&#10003;</span>
         <p className={`TodoItem-p ${props.completed ? "TodoItem-p--complete" : null}`}>{props.text}</p>
         <span className="Icon Icon-delete" onClick={props.onDelete}>X</span>
+        <DeleteIcon />
+
       </li>
     );
 }
